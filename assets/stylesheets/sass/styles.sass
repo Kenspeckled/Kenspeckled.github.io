@@ -1,0 +1,40 @@
+=opacity($opacity)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+  filter: alpha(opacity=($opacity*100))
+  -moz-opacity: $opacity
+  -khtml-opacity: $opacity
+  opacity: $opacity
+
+=border-radius($radius: 5px)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+html,
+body
+  background-color: #F18C33
+
+body
+  font-family: "Open Sans"
+  font-weight: lighter
+  font-size: 18px
+  color: white
+  background-color:  #F18C33
+  padding: 20px
+
+.logo
+  max-width: 1400px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 40px
+  padding: 10px 20px
+  img
+    max-width: 100%
+.text-container
+  background-color: #D67A29
+  max-width: 1400px
+  margin: 20px auto
+  padding: 10px 20px
+  +border-radius(4px)
+  a
+    color: #B8C7E0
