@@ -16,6 +16,24 @@
   src: url("../../fonts/opensans/bold/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans/bold/OpenSans-Bold-webfont.woff") format("woff"), url("../../fonts/opensans/bold/OpenSans-Bold-webfont.ttf") format("truetype"), url("../../fonts/opensans/bold/OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
   font-weight: bold;
   font-style: normal; }
+.clearfix, header {
+  zoom: 1; }
+  .clearfix:before, header:before {
+    content: " ";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .clearfix:after, header:after {
+    content: " ";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both; }
+
 html,
 body {
   background-color: #F18C33; }
@@ -34,7 +52,15 @@ body {
   margin-right: auto;
   margin-bottom: 40px;
   padding: 10px 20px;
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
+  @media screen and (max-width: 850px) {
+    .logo {
+      text-align: center;
+      float: none;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0px; } }
   .logo img {
     max-width: 100%; }
 
@@ -50,8 +76,16 @@ body {
     color: #B8C7E0; }
 
 .contact-details {
-  display: inline-block;
+  margin-left: 20px;
+  display: inline;
   float: right; }
+  @media screen and (max-width: 850px) {
+    .contact-details {
+      display: block;
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin: 0px 0px 20px 0px; } }
   .contact-details p {
     margin: 0; }
 

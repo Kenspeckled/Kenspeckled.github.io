@@ -12,6 +12,24 @@
   -moz-border-radius: $radius
   border-radius: $radius
 
+.clearfix
+  &:before
+    content: '\0020'
+    display: block
+    overflow: hidden
+    visibility: hidden
+    width: 0
+    height: 0
+  &:after
+    content: '\0020'
+    display: block
+    overflow: hidden
+    visibility: hidden
+    width: 0
+    height: 0
+    clear: both
+  zoom: 1
+
 html,
 body
   background-color: #F18C33
@@ -31,6 +49,13 @@ body
   margin-bottom: 40px
   padding: 10px 20px
   display: inline-block
+  float: left
+  @media screen and (max-width: 850px)
+    text-align: center
+    float: none
+    width: 100%
+    margin-bottom: 20px
+    padding: 0px
   img
     max-width: 100%
 .text-container
@@ -42,9 +67,19 @@ body
   a
     color: #B8C7E0
 
+header
+  @extend .clearfix
+
 .contact-details
-  display: inline-block
+  margin-left: 20px
+  display: inline
   float: right
+  @media screen and (max-width: 850px)
+    display: block
+    float: none
+    width: 100%
+    text-align: center
+    margin: 0px 0px 20px 0px
   p
     margin: 0
 
