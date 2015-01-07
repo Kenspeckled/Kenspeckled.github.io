@@ -1,3 +1,5 @@
+@import fonts
+
 =opacity($opacity)
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
   filter: alpha(opacity=($opacity*100))
@@ -46,7 +48,14 @@ body
   p
     margin: 0
 
-.footer
-  position: absolute
-  bottom: 10px
-  right: 10px
+// Sticky Footer
+$footer-height: 20px
+.full-content-wrapper
+  min-height: 100%
+  min-height: 100vh
+  margin: 0 auto (-$footer-height) auto
+footer.foot, .sticky-footer-push
+  height: $footer-height
+.foot
+  margin-top: -$footer-height
+  float: right
