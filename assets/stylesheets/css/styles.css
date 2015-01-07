@@ -15,7 +15,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  display: inline-block; }
   .logo img {
     max-width: 100%; }
 
@@ -29,5 +30,16 @@ body {
   border-radius: 4px; }
   .text-container a {
     color: #B8C7E0; }
+
+.contact-details {
+  display: inline-block;
+  float: right; }
+  .contact-details p {
+    margin: 0; }
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
